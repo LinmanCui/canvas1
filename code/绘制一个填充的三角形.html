@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	canvas{
+		border:1px solid #ccc;
+		}
+		</style>
+</head>
+<body>
+	<canvas width="600" height="400"></canvas>
+	<script>
+	var myCanvas =document.querySelector('canvas');
+	var ctx = myCanvas.getContext('2d');
+	/*绘制一个三角形*/
+	ctx.moveTo(100,100);
+	ctx.lineTo(200,100);
+	ctx.lineTo(200,200);
+	/*ctx.moveTo(100,100);*/
+	/*描边*/
+	ctx.closePath();
+	ctx.lineWidth = 10;
+	ctx.stroke();
+	/*填充.默认颜色是黑色*/
+	ctx.fill();
+	</script>
+</body>
+</html>
